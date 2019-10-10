@@ -4,22 +4,67 @@ header, nav, main, footer, aside {
 
 * {
     box-sizing: border-box;
+    background-color: #fff;
 }
-
+#container {
+    color: #060;
+    font-family: Verdana, Arial, sans-serif;
+}
+header {
+    background-color: #636631;
+    background-image: url(showybg.jpg);
+    background-position: bottom;
+    background-repeat: repeat-x;
+    height: 120px;
+    color: #c6c;
+    text-align: right;
+    padding: 0 20px;
+    border-bottom: 2px solid #000;
+}
+nav {
+    float: left;
+    width: 150px;
+    background-color: #eee;
+}
+aside {
+    float: right;
+    width: 200px;
+}
+main {
+    margin: 0 21px 0 160px;
+    padding: 1px 10px 20px 10px;
+}
+footer {
+    font-size: 0.70em;
+    text-align: center;
+    color: #060;
+    background-color: #fff;
+    padding-top: 10px;
+    clear: both;
+}
+h1 {
+    margin-top: 0px;
+    font-size: 3em;
+    text-align: left;
+    text-shadow: 2px 2px 2px #000;
+}
 header a {
     font-size: 0.80em;
 }
-
-header a:link, header nav ul {
+header a:link, header a:visited  {
+    color: #fff;
+}
+header a:focus, header a:hover {
+    color: #eee;
+}
+header nav ul {
     margin-top: 20px;
     list-style-type: none;
 }
-
 nav a {
     text-decoration: none;
-    font-size: 1.2em
+    font-size: 1.2em;
 }
-
 nav a:link {
     color: #060;
 }
@@ -49,5 +94,38 @@ main h2, main h3 {
 }
 
 .floatright {
-    margin:
+    margin: 10px;
+    float: right;
+}
+aside h3 {
+    padding-bottom: 2px;
+    border-bottom: 1px solid #000;
+    margin: 10px;
+    font-size: 0.90em;
+    color: #c6c;
+}
+.news {
+    font-size: 0.80em;
+    margin: 10px;
+}
+@media only screen and (max-width: 1024px) {
+    body {margin: 0px;}
+    main {margin: 0px;}
+    #container {min-width: 0px;}
+    nav {float: none; width: auto;}
+    aside {float: none; width: auto;}
+    nav li {display: inline-block; padding: 0.5em;}
+    nav ul {text-align: center;}
+    nav img {display: none;}
+    h1, h2, h3 {font-size: 120%;}
+    p {font-size: 90%;}
+}
+@media only screen and (max-width: 768px) {
+    #container {min-width: 0px;}
+    h1, h2, h3 {font-size: 100%;}
+    p, .news {font-size: 80%;}
+    nav, nav ul, nav li {padding: 0px;}
+    nav li {display: block;}
+    nav a {display: block; padding: 0.5em 0; border-bottom: 2px ridge #00005d;}
+    img {display: none;}
 }
